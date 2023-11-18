@@ -22,8 +22,7 @@ import java.util.UUID;
 @Entity
 public class Chocolate {
     @Id
-    @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name="UUID", type = org.hibernate.id.uuid.UuidGenerator.class)
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
     private UUID id;
 
